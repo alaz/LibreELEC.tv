@@ -60,5 +60,8 @@
   # build with installer (yes / no)
     INSTALLER_SUPPORT="no"
 
+  # build with fscache support (local disk cache for NFS/CIFS mounts) (yes / no)
+    CACHEFILESD_SUPPORT="no"
+
   # include uvesafb support (yes / no)
     UVESAFB_SUPPORT="no"

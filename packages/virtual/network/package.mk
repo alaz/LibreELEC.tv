@@ -33,9 +33,8 @@ fi
 
 if [ "${NFS_SUPPORT}" = "yes" ]; then
   PKG_DEPENDS_TARGET+=" nfs-utils"
+fi
 
-  # the daemon is only usable where the kernel provides the cachefiles backend
-  if grep -q "^CONFIG_CACHEFILES=" "$(kernel_config_path)"; then
-    PKG_DEPENDS_TARGET+=" cachefilesd"
-  fi
+if [ "${CACHEFILESD_SUPPORT}" = "yes" ]; then
+  PKG_DEPENDS_TARGET+=" cachefilesd"
 fi

@@ -203,6 +203,9 @@
 # build with NFS support (mounting nfs shares via the OS) (yes / no)
   NFS_SUPPORT="yes"
 
+# build with fscache support (local disk cache for NFS/CIFS mounts) (yes / no)
+  CACHEFILESD_SUPPORT="no"
+
 # build with Samba Client support (mounting samba shares via the OS) (yes / no)
   SAMBA_SUPPORT="yes"
 

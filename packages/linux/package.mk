@@ -141,6 +141,11 @@ pre_make_target() {
     ${PKG_BUILD}/scripts/config --disable CONFIG_NFS_FS
   fi
 
+  # disable cachefiles support if not enabled
+  if [ ! "${CACHEFILESD_SUPPORT}" = yes ]; then
+    ${PKG_BUILD}/scripts/config --disable CONFIG_CACHEFILES
+  fi
+
   # disable cifs support if not enabled
   if [ ! "${SAMBA_SUPPORT}" = yes ]; then
     ${PKG_BUILD}/scripts/config --disable CONFIG_CIFS
